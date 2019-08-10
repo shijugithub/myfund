@@ -22,21 +22,39 @@ def getTheVarNadd():
    print("")
    var2=int(input("Enter the secornd integer : "))
    theResult= var1 + var2
-   print(theResult)
+   print("The sum is : " + str(theResult))
    print("")
 
 def theWhileLoop():
    theValue="Good"
    while (theValue != "Exit"):
       theValue=raw_input("Enter Exit to exit: ")
-      print(theValue)
+      print("The value you entered is : " + theValue)
       print("")
 
+def theList():
+   print("You are entering theList function")
+   myList = []
+   theValue = "Good"
+   while (theValue != "Exit"):
+      theValue = raw_input("Enter a value in the List. Enter Exit to exit : ")
+      if (theValue != "Exit"):
+         myList.append(theValue)
+   print("The number of entries you made is : " + str(len(myList)))
+   print("")
+   print("The values you entered are : ")
+   print(str(myList))
+   print("")
+   print("The values you entered are : ")
+   for theList in myList:
+     print(theList)
 
-main()
+
+#main()
 theVar= "Cool it is"
 print(theVar)
-theAddFn(1,2)
-getTheVarNadd()
-theWhileLoop()
+#theAddFn(1,2)
+#getTheVarNadd()
+#theWhileLoop()
+theList()
 
