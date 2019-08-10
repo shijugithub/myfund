@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import myfund_add
 
 def main():
    print("You are in the main function")
@@ -57,4 +58,4 @@ print(theVar)
 #getTheVarNadd()
 #theWhileLoop()
 theList()
-
+print("The Secret is : " + str(myfund_add.theSecret()))
