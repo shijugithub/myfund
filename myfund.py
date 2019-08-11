@@ -50,6 +50,10 @@ def theList():
    for theList in myList:
      print(theList)
 
+def theFile():
+   print("You have entered theFile function")
+   fileSelection = raw_input("Enter the file location : ")
+   print("The file you have selected is : " + str(fileSelection))
 
 #main()
 theVar= "Cool it is"
@@ -57,5 +61,6 @@ print(theVar)
 #theAddFn(1,2)
 #getTheVarNadd()
 #theWhileLoop()
-theList()
+#theList()
+theFile()
 print("The Secret is : " + str(myfund_add.theSecret()))
