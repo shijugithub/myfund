@@ -8,11 +8,13 @@ def theFile():
    theFileLines = theFile.readline()
    firstLine = theFileLines
 
-
+   theHeaders = firstLine.split(",")
+   for heading in theHeaders:
+      print(heading)
 
    while theFileLines:
-      print(theFileLines)
-      print("*********")
+      #print(theFileLines)
+      #print("*********")
       theFileLines=theFile.readline()
    theFile.close()
 
