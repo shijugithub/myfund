@@ -1,35 +1,33 @@
 #!/usr/bin/python
 
-def theFile():
+import Investment
+
+def main():
    print("You have entered theFile function")
    fileSelection = raw_input("Enter the file location : ")
-   print("The file you have selected is : " + str(fileSelection))
    theFile = open(fileSelection)
    theFileLines = theFile.readline()
    firstLine = theFileLines
+      
+   george = Investment.Investment("BANK")
 
    theHeaders = firstLine.split(",")
    noOfHeadings = len(theHeaders)
-   print("Number of headings : " + str(noOfHeadings))
-   for heading in theHeaders:
-      print(heading)
 
+   theFileLines=theFile.readline()
+   listOfInvestments = []
+   
    while theFileLines:
       theValues = theFileLines.split(",")
-      print("======")
-      print("Each value in the line is as follows:")
-      for eachValue in theValues:
-         print(str(eachValue))
-
-      #invDictionary = {}
-      #for heading in theHeaders:
-      #   invDictionary[heading] = 
-
-
-
-      #print(theFileLines)
-      #print("*********")
+      investment = dict(zip(theHeaders, theValues))
+      theAccountNo = "INV" + str(investment['ACCOUNT No'])
+      listOfInvestments.append("theAccountNo")
+      #print(theAccountNo)
+      vars()[theAccountNo] = Investment.Investment(investment['ACCOUNT No'])
+            
       theFileLines=theFile.readline()
    theFile.close()
 
-theFile()
+   
+
+main()
