@@ -9,10 +9,24 @@ def theFile():
    firstLine = theFileLines
 
    theHeaders = firstLine.split(",")
+   noOfHeadings = len(theHeaders)
+   print("Number of headings : " + str(noOfHeadings))
    for heading in theHeaders:
       print(heading)
 
    while theFileLines:
+      theValues = theFileLines.split(",")
+      print("======")
+      print("Each value in the line is as follows:")
+      for eachValue in theValues:
+         print(str(eachValue))
+
+      #invDictionary = {}
+      #for heading in theHeaders:
+      #   invDictionary[heading] = 
+
+
+
       #print(theFileLines)
       #print("*********")
       theFileLines=theFile.readline()

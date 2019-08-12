@@ -1,0 +1,25 @@
+User should be able to read the exising CSV file that has investment details and load it to the system
+
+System should be able to make objects of each Account Numbers, that should have the following attributes:
+Account No
+Bank Name
+Bank branch
+Currency
+Type of Fund
+Description
+Start Date
+Maturity Date
+Account Balance
+Last Update
+Account Status
+Interest Rate
+
+Methods associated with each Account Number object
+Update Balance
+Update Last Update (date)
+Update Account Status
+Update Interest Rate
+Find and Update Interest Rate
+Display Account details
+
+Create an updated CSV file as the one loaded initially
