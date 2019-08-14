@@ -3,8 +3,9 @@
 import Investment
 
 def main():
-   print("You have entered theFile function")
-   fileSelection = raw_input("Enter the file location : ")
+   #print("You have entered theFile function")
+   #fileSelection = raw_input("Enter the file location : ")
+   fileSelection = "/file/temp.txt"
    theFile = open(fileSelection)
    theFileLines = theFile.readline()
    firstLine = theFileLines
@@ -22,9 +23,10 @@ def main():
       investment = dict(zip(theHeaders, theValues))
       theAccountNo = "INV" + str(investment['ACCOUNT No'])
       listOfInvestments.append("theAccountNo")
-      #print(theAccountNo)
-      vars()[theAccountNo] = Investment.Investment(investment['ACCOUNT No'])
-            
+      globals()['obj_%s' % theAccountNo] = Investment.Investment(investment['ACCOUNT No'])
+      #vars()[theAccountNo] = Investment.Investment(investment['ACCOUNT No'])
+      #theAccountNo.printReport()
+      obj_INT_10523300008488.printReport()      
       theFileLines=theFile.readline()
    theFile.close()
 
