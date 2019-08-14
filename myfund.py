@@ -10,8 +10,6 @@ def main():
    theFileLines = theFile.readline()
    firstLine = theFileLines
       
-   george = Investment.Investment("BANK")
-
    theHeaders = firstLine.split(",")
    noOfHeadings = len(theHeaders)
 
@@ -21,12 +19,12 @@ def main():
    while theFileLines:
       theValues = theFileLines.split(",")
       investment = dict(zip(theHeaders, theValues))
-      theAccountNo = "INV" + str(investment['ACCOUNT No'])
+      theAccountNo = "INV" + str(investment['ACCOUNT_No'])
       listOfInvestments.append("theAccountNo")
-      globals()['obj_%s' % theAccountNo] = Investment.Investment(investment['ACCOUNT No'])
-      #vars()[theAccountNo] = Investment.Investment(investment['ACCOUNT No'])
-      #theAccountNo.printReport()
-      obj_INT_10523300008488.printReport()      
+      
+      theAccountNo =Investment.Investment(investment['BANK'], investment['DESCRIPTION'], investment['BRANCH'], investment['ACCOUNT_No'], investment['DEP_DATE'], investment['DEP_AMT'], investment['Mat_Dt'], investment['CURRENCY'], investment['TYPE'], investment['INT_%'], investment['Mat_Amt'])
+      
+      theAccountNo.printReport()
       theFileLines=theFile.readline()
    theFile.close()
 
